@@ -10,10 +10,12 @@ axios.get('https://api.github.com/repos/Jorge-Arturo-Hernandez-Almazan/gestion_d
     var tamanio = ""
     for(i=0;i< response.data.length; i ++){
         suma += response.data[i].assets[0].download_count;
-        link_sistema = response.data[i].assets[0].browser_download_url;
-        archivo = response.data[i].assets[0].name;
-        tamanio = response.data[i].assets[0].size;
+        
     }
+
+    link_sistema = response.data[0].assets[0].browser_download_url;
+    archivo = response.data[0].assets[0].name;
+    tamanio = response.data[0].assets[0].size;
 
     tamanio = Math.trunc(tamanio / 1024 );
     document.getElementById('descargas').innerHTML = suma;
@@ -47,11 +49,12 @@ axios.get('https://api.github.com/repos/DiegoLumbreras/ManualTecnico/releases')
     //console.log(response.data);
     for(i=0;i< response.data.length; i ++){
         suma += response.data[i].assets[0].download_count;
-        link = response.data[i].assets[0].browser_download_url;
-
-        archivo_doc = response.data[i].assets[0].name;
-        tamanio_doc = response.data[i].assets[0].size;
+        
     }
+
+    link = response.data[0].assets[0].browser_download_url;
+    archivo_doc = response.data[0].assets[0].name;
+    tamanio_doc = response.data[0].assets[0].size;
 
     tamanio_doc = Math.trunc(tamanio_doc / 1024 );
     document.getElementById('descargas_doc').innerHTML = suma;
