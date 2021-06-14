@@ -35,7 +35,7 @@ axios.get('https://api.github.com/repos/Jorge-Arturo-Hernandez-Almazan/gestion_d
     
 //descargas_doc
 
-axios.get('https://api.github.com/repos/DiegoLumbreras/ManualTecnico/releases')
+axios.get('https://api.github.com/repos/Gestion-de-conocimiento/documentacion/releases')
 .then(function (response) {
     // handle success
 
